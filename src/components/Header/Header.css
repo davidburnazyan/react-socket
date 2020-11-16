@@ -1,0 +1,40 @@
+header {
+    transition: 1s;
+    right: 100%;
+    left: auto;
+    top: 35%;
+    z-index: 1001;
+    position: fixed;
+    background: linear-gradient(180deg,rgba(0,0,0,0.18) 100%,rgba(0,0,0,0.4962359943977591) 100%);
+}
+
+header:hover{
+    transition: 1s;
+    right: unset;
+    left: 0%;
+}
+nav {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+a {
+    padding: 15px;
+    width: max-content;
+    color: #fff;
+}
+.openBone {
+    transition: 0.5s;
+    position: absolute;
+    left: 100%;
+    top: 32%;
+    width: 50px;
+    transform: rotate(50deg);
+    cursor: pointer;
+}
+header:hover .openBone {
+    transition: .5s;
+    width: 0px;
+    top: 42%;
+}
+

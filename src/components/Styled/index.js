@@ -1,0 +1,9 @@
+export { default as Button } from './Button';
+export { default as Form } from './Form';
+export { default as HTag } from './HTag';
+export { default as Img } from './Img';
+export { default as Input } from './Input';
+export { default as Text } from './Text';
+export { default as Thumbnail } from './Thumbnail';
+export { default as View } from './View';
+export { default as Label } from './Label';
