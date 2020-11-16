@@ -1,5 +1,6 @@
 {
-    "baseFilesPath" : "https://calm-cove-42869.herokuapp.com",
-    "baseAPIUrl" : "https://calm-cove-42869.herokuapp.com/api",
-    "baseUserUrlOld" : "http://localhost:4000/api"
+    "baseFilesPath" : "http://localhost:4000",
+    "baseAPIUrl" : "http://localhost:4000/api",
+    "aa": "https://calm-cove-42869.herokuapp.com/api"
 }
+
