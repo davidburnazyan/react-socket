@@ -5,7 +5,7 @@ import config from '../helpers/config';
 import jwt_decode from "jwt-decode";
 
 export const Load_info_for_home = dispatch => {
-    const url = `${config.baseUserUrl}/product`;
+    const url = `${config.baseAPIUrl}/product`;
     axios.get(url)
         .then(result => {
             dispatch({
@@ -24,7 +24,7 @@ export const load_product_and_messages = (dispatch, id) => {
             }
         })
     }
-    const url = `${config.baseUserUrl}`;
+    const url = `${config.baseAPIUrl}`;
     axios.get(`${url}/product/${id}`)
         .then(product => {
             if(localStorage['jwt-token'] !== undefined){

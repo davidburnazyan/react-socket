@@ -4,9 +4,11 @@ import Loader from "../Loader";
 import { View } from '../Styled';
 import { connect } from 'react-redux';
 import ProductInfo from '../ProductInfo';
+import config from '../../helpers/config';
 import ProductImages from '../ProductImages';
 import socketIoClient from 'socket.io-client';
 import { load_product_and_messages } from '../../actions/productActions';
+
 
 class Product extends Component {
     constructor(props){
@@ -15,7 +17,7 @@ class Product extends Component {
         this.state = {
             portal: false
         }
-        this.endpoint = 'http://localhost:4000';
+        this.endpoint = config.baseFilesPath;
         this.socket = socketIoClient(this.endpoint);
         load_product_and_messages(dispatch,match.params.id)
     }

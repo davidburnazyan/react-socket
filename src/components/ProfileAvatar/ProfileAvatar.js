@@ -1,15 +1,15 @@
 import React from 'react';
 import { Img } from '../Styled';
+import config from '../../helpers/config';
 
 const ProfileAvatar = (props) => {
     const { avatar } = props;
     let path;
     if(avatar === 'default-user.png')
-        path = 'http://localhost:4000/uploads/default'
+        path = `${config.baseFilesPath}/uploads/default`
     else
-        path = 'http://localhost:4000/uploads/users'
+        path = `${config.baseFilesPath}/uploads/users`
 
-    console.log(path)
     return (
         <div>
             <Img sign src={`${path}/${avatar}`}/>

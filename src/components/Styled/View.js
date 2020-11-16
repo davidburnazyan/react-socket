@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import config from '../../helpers/config';
 
 const isProducts = ({ products }) => {
     if(products) {
@@ -57,7 +58,7 @@ const fixed = ({ fixed }) => {
 const backImage = ({backImage}) => {
     if(backImage) {
         return`
-            background-image: url("http://localhost:4000/uploads/products/${backImage}");
+            background-image: url(${config.baseFilesPath}/uploads/products/${backImage});
             background-attachment: fixed;
         `
     }

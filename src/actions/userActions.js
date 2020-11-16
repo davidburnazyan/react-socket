@@ -4,7 +4,7 @@ import config from '../helpers/config';
 import jwtDecode from "jwt-decode";
 
 export const isAuth = dispatch => {
-    const url = `${config.baseUserUrl}/user/check-auth`
+    const url = `${config.baseAPIUrl}/user/check-auth`
     axios.defaults.headers['Authorization'] = localStorage.getItem('jwt-token');
     axios.post(url)
         .then(result => {
@@ -20,7 +20,7 @@ export const isAuth = dispatch => {
         })
 }
 export const Sing_in = ({email, password}, dispatch) => {
-    const url = `${config.baseUserUrl}/user/sign-in`;
+    const url = `${config.baseAPIUrl}/user/sign-in`;
     axios.post(url, {email, password})
         .then(result => {
             const { token } = result.data;
@@ -41,7 +41,7 @@ export const Sing_in = ({email, password}, dispatch) => {
         });
 };
 export const Sign_Out = (token, dispatch) => {
-    const url = `${config.baseUserUrl}/user/sign-out`;
+    const url = `${config.baseAPIUrl}/user/sign-out`;
     axios.post(url)
         .then(result => {
 
@@ -68,7 +68,7 @@ export const Sign_Up = ({ name, surname, email, password, confirm, image }, disp
     if(image !== null)
         formData.append('avatar', image, image.name);
 
-    fetch(`${config.baseUserUrl}/user/sign-up`, {
+    fetch(`${config.baseAPIUrl}/user/sign-up`, {
         method: "POST",
         headers: { 'Accept': 'application/json' },
         body: formData

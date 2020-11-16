@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ImagesBar from '../ImagesBar';
 import {Img, View} from "../Styled";
+import config from '../../helpers/config';
 
 const ProductImages = (props) => {
     const { images } = props;
@@ -29,8 +30,8 @@ const ProductImages = (props) => {
                 <View productImg>
                     {
                         main === undefined ?
-                            <Img src={`http://localhost:4000/uploads/products/` + images[0]}/> :
-                            <Img src={`http://localhost:4000/uploads/products/` + main}/>
+                            <Img src={`${config.baseFilesPath}/uploads/products/` + images[0]}/> :
+                            <Img src={`${config.baseFilesPath}/uploads/products/` + main}/>
                     }
                 </View>
                 <ImagesBar images={props.images} changeMain={changeMain}/>
